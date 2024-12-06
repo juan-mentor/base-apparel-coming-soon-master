@@ -42,7 +42,12 @@ body {
     margin: 1.875rem;
 }
 
+.hero__logo--desktop {
+    display: none;
+}
+
 .hero__image {
+    max-width: 100%;
     margin-bottom: 2rem;
 }
 
@@ -93,7 +98,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 66px;
+    width: 63px;
     height: 47px;
     background: linear-gradient(var(--linear2)) ;
     border-radius: 45%;
@@ -102,4 +107,50 @@ body {
     align-items: center;
 }
 
+@media screen and (min-width: 37.5rem) {
+    .hero {
+        height: 800px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
 
+    .hero__logo {
+        display: none;
+    }
+
+    .hero__logo--desktop {
+        display: block;
+        margin: 0;
+    }
+
+    .hero__content {
+        padding: 5.5rem 10.25rem;
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    .hero__title {
+        margin: 8rem 0 2.5rem 0;
+        font-size: 3.3rem;
+        line-height: 1.2;
+        letter-spacing: 20px;
+    }
+
+    .hero__paragraph {
+        max-width: 50ch;
+        margin-bottom: 3rem;
+        letter-spacing: 1px;
+    }
+
+    .hero__cta {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+        max-width: 444px;
+    }
+
+    .hero__icon-container {
+        width: 100px;
+        height: 55px;
+        border-radius: 30px;
+    }
+}

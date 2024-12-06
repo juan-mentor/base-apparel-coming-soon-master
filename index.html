@@ -26,17 +26,24 @@
       <header class="hero__header">
         <picture class="hero__image-container">
           <img src="images/logo.svg" alt="logo de Base Appparel" class="hero__logo">
+
+          <source srcset="images/hero-desktop.jpg" media="(min-width: 600px)">
           <img src="images/hero-mobile.jpg" alt="" class="hero__image">
         </picture>
       </header>
+
       <section class="hero__content">
+        <img src="images/logo.svg" alt="logo de Base Appparel" class="hero__logo hero__logo--desktop">
         <h2 class="hero__title">We're <span>coming soon</span></h2>
+
         <p class="hero__paragraph">
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
+
         <form class="hero__form">
-          <input type="text" class="hero__cta" placeholder="Email Address">
+          <input type="email" class="hero__cta" placeholder="Email Address">
+          
           <div class="hero__icon-container">
             <img src="images/icon-arrow.svg" alt="icono de flecha derecha" class="hero__icon">
           </div>
