@@ -16,12 +16,14 @@
     --linear2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
 }
 
+    /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+    /* General styles */
 html {
     font-size: 16px;
 }
@@ -42,6 +44,7 @@ body {
     margin: 1.875rem;
 }
 
+/* hidden logo */
 .hero__logo--desktop {
     display: none;
 }
@@ -51,6 +54,7 @@ body {
     margin-bottom: 2rem;
 }
 
+/* content style */
 .hero__content {
     text-align: center;
     padding: 2rem;
@@ -66,6 +70,7 @@ body {
     font-weight: 400;
     letter-spacing: 10px;
 }
+
 .hero__title span {
     color: var(--dark-grayish-red);
     font-weight: 600;
@@ -77,9 +82,11 @@ body {
     line-height: 1.5;
 }
 
+/* form style */
 .hero__form {
     width: 100%;
     margin: auto;
+    margin-bottom: 10px;
     position: relative;
 }
 
@@ -119,6 +126,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero__icon-container:hover {
+    filter: brightness(1.2);
+    box-shadow: -3px 10px 15px hsla(0, 36%, 70%, 0.8);
+    cursor: pointer;
+}
+
+.hero__message {
+    padding-left: 35px;
 }
 
 @media screen and (min-width: 37.5rem) {

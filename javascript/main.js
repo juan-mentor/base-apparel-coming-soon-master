@@ -1,25 +1,38 @@
+// list of trapped elements HTML
 const elementInput = document.querySelector('.hero__cta');
 const elementIconContainer = document.querySelector('.hero__icon-container');
 const elementError = document.querySelector('.hero__error');
 const elementMessage = document.querySelector('.hero__message');
-let inputValue = elementInput.value;
+// phrase to validate
+let paragraph = '';
 
+// check if email is valid
 function checkEmail() {
-    let searchArroba = inputValue.indexOf('@');
-    let searchPoint = inputValue.indexOf('.');
-    let searchCom = inputValue.indexOf('com');
-    
-    console.log(searchArroba,searchPoint,searchCom);
-    if (searchArroba !== -1 && searchPoint !== -1 && searchCom !== -1) {
-        elementMessage.textContent = 'search email, thank you.';
-        elementInput.value = '';
-    } else {
-        elementMessage.textContent = 'error de envío.';
-    }
+    if (paragraph.indexOf('@') !== -1 && paragraph.indexOf('.') !== -1 && paragraph.indexOf('com')) {
+        // reset paragraph
+        elementInput.value = "";
+        elementMessage.textContent = 'Searched email, thank you';
+        // reset message
+        setTimeout(() => {
+            elementMessage.textContent = '';
+        }, 3000);
 
+    } else {
+        elementMessage.textContent = "Please provide a valid email";
+        elementError.classList.add('active');
+        elementInput.style.borderColor = 'hsl(0,93%,68%)';
+    }
 }
 
-elementIconContainer.addEventListener('click', () => {
-    checkEmail();
-})
+// When we press the button
+elementIconContainer.addEventListener('click',checkEmail);
 
+// Every time we update the text
+elementInput.addEventListener('input', (e) => {
+    // I store the phrase written in the input
+    paragraph = e.target.value;
+    // values reset
+    elementError.classList.remove('active');
+    elementInput.style.borderColor = 'initial';
+    elementMessage.textContent = '';
+});

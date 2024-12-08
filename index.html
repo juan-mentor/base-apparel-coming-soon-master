@@ -25,6 +25,7 @@
     <main class="hero">
       <header class="hero__header">
         <picture class="hero__image-container">
+          <!-- logo visible en mobile -->
           <img src="images/logo.svg" alt="logo de Base Appparel" class="hero__logo">
 
           <source srcset="images/hero-desktop.jpg" media="(min-width: 600px)">
@@ -33,6 +34,7 @@
       </header>
 
       <section class="hero__content">
+        <!-- logo visible en desktop -->
         <img src="images/logo.svg" alt="logo de Base Appparel" class="hero__logo hero__logo--desktop">
         <h2 class="hero__title">We're <span>coming soon</span></h2>
 
@@ -41,8 +43,9 @@
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
 
-        <form class="hero__form">
-          <input type="email" class="hero__cta" placeholder="Email Address">
+        <!-- impido que se active la validación desde HTML (validación desde javascript, de forma personalizada.)-->
+        <form class="hero__form" novalidate>
+          <input type="email" class="hero__cta" placeholder="Email Address" autofocus>
 
           <img src="images/icon-error.svg" alt="icono de error" class="hero__error">
           
