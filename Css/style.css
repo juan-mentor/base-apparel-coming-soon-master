@@ -12,7 +12,7 @@
 
     /* Gradients */
 
-    --linear1: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --linear1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
     --linear2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
 }
 
@@ -50,7 +50,8 @@ body {
 }
 
 .hero__image {
-    max-width: 100%;
+    width: 100%;
+    /* max-width: 100%; */
     margin-bottom: 2rem;
 }
 
@@ -109,10 +110,12 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    visibility: hidden;
 }
 
 .hero__error.active {
     right: 120px;
+    visibility: visible;
 }
 
 .hero__icon-container {
@@ -138,11 +141,18 @@ body {
     padding-left: 35px;
 }
 
-@media screen and (min-width: 37.5rem) {
+@media screen and (min-width: 38.125rem) {
     .hero {
         height: 800px;
         display: flex;
         flex-direction: row-reverse;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-size: cover;
+        background-color: var(--linear1);
+    }
+
+    .hero__header {
+        width: 34%;
     }
 
     .hero__logo {
@@ -154,10 +164,15 @@ body {
         margin: 0;
     }
 
+    .hero__image {
+        width: 100%;
+        height: 100%;
+    }
+
     .hero__content {
+        width: 58%;
         padding: 5.5rem 10.25rem;
         text-align: left;
-        flex-grow: 1;
     }
 
     .hero__title {
