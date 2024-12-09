@@ -8,7 +8,7 @@ let paragraph = '';
 
 // check if email is valid
 function checkEmail() {
-    if (paragraph.indexOf('@') !== -1 && paragraph.indexOf('.') !== -1 && paragraph.indexOf('com')) {
+    if (paragraph.indexOf('@') !== -1 && paragraph.indexOf('.') !== -1 && paragraph.indexOf('com') && paragraph.length) {
         // reset paragraph
         elementInput.value = "";
         elementMessage.textContent = 'Searched email, thank you';

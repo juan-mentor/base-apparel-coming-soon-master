@@ -67,7 +67,7 @@ body {
     margin: auto;
     margin-bottom: 1.875rem;
     text-transform:uppercase;
-    font-size: 2rem;
+    font-size: clamp(2rem, 2rem + 1vw, 3.3rem);
     font-weight: 400;
     letter-spacing: 10px;
 }
@@ -138,7 +138,7 @@ body {
 }
 
 .hero__message {
-    padding-left: 35px;
+    width: 100%;
 }
 
 @media screen and (min-width: 38.125rem) {
@@ -153,6 +153,7 @@ body {
 
     .hero__header {
         width: 34%;
+        flex-grow: 1;
     }
 
     .hero__logo {
@@ -166,18 +167,19 @@ body {
 
     .hero__image {
         width: 100%;
-        height: 100%;
+        height: 70%;
+        object-fit: cover;
     }
 
     .hero__content {
         width: 58%;
-        padding: 5.5rem 10.25rem;
+        padding: 5.5rem 11.3%;
         text-align: left;
     }
 
     .hero__title {
         margin: 8rem 0 2.5rem 0;
-        font-size: 3.3rem;
+        /* font-size: 3.3rem; */
         line-height: 1.2;
         letter-spacing: 20px;
     }
@@ -188,10 +190,15 @@ body {
         letter-spacing: 1px;
     }
 
+    .hero__form {
+        width: 160%;
+    }
+
     .hero__cta {
-        font-size: 1.1rem;
-        padding: 15px 30px;
+        width: 100%;
         max-width: 444px;
+        padding: 15px 30px;
+        font-size: 1.1rem;
     }
 
     .hero__icon-container {
@@ -199,4 +206,24 @@ body {
         height: 55px;
         border-radius: 30px;
     }
+
+    .hero__message {
+        width: 120%;
+        padding-left: 35px;
+    }
+}
+
+@media screen and (min-width: 53.75rem) {
+    .hero__image {
+        height: 100%;
+    }
+
+    .hero__form {
+        width: 100%;
+    }
+
+    .hero__message {
+        width: 100%;
+    }
+
 }
