@@ -25,7 +25,7 @@ function checkEmail() {
 }
 
 // When we press the button
-elementIconContainer.addEventListener('click',checkEmail);
+elementIconContainer.addEventListener('click', checkEmail);
 
 // Every time we update the text
 elementInput.addEventListener('input', (e) => {

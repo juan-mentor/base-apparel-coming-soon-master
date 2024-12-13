@@ -51,7 +51,6 @@ body {
 
 .hero__image {
     width: 100%;
-    /* max-width: 100%; */
     margin-bottom: 2rem;
 }
 
@@ -179,7 +178,6 @@ body {
 
     .hero__title {
         margin: 8rem 0 2.5rem 0;
-        /* font-size: 3.3rem; */
         line-height: 1.2;
         letter-spacing: 20px;
     }
@@ -225,5 +223,4 @@ body {
     .hero__message {
         width: 100%;
     }
-
 }
